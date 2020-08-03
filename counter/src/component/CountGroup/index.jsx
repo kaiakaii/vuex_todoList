@@ -1,10 +1,13 @@
 import React from 'react';
-import Count from '../Counter/index'
+import Counter from '../Counter/index';
 
 class CountGroup extends React.Component{
 
+
     render(){
-        <Count/>
+        return (
+            new Array(5).fill(0).map((key,value)=>{return <Counter key={value}/>})
+        )
     }
     
 }
