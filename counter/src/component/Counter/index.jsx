@@ -15,11 +15,13 @@ class Counter extends React.Component {
     }
 
     onClickAdd=() => {
+        this.props.inParent()
         this.setState(state => {
           return {count:state.count+1}
         })
     }
     onClickDel=() => {
+        this.props.delParent()
         this.setState({ count: this.state.count - 1 })
     }
 
